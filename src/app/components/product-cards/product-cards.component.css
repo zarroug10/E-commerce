@@ -1,0 +1,33 @@
+@media (max-width: 768px) {
+    .sale-percentage {
+        font-size: 80px !important;
+    }
+}
+
+.wallpaper {
+    background-image: url('/images/Arduino.png');
+    background-size: cover;
+    background-position: center;
+    height: 18em;
+  
+}
+
+.visible{
+    opacity: 0;
+}
+
+.wallpaper:hover .visible {
+    opacity: 1;
+    animation: fadeUp 1s ease-in-out;
+}
+
+@keyframes fadeUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

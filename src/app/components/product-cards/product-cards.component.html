@@ -1,0 +1,131 @@
+<div class="row">
+  <div class="col-3 m-5">
+    <div cl>
+      <div class="container ">
+        <div class="col">
+          <h5>Filter By</h5>
+          <ul class="list-unstyled">
+            <li>
+              <div class="accordion" id="CategoriesList">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#Categories" aria-expanded="false" aria-controls="collapseOne">
+                      Categories
+                    </button>
+                  </h2>
+                  <div id="Categories" class="accordion-collapse collapse show" data-bs-parent="#CategoriesList">
+                    <div class="accordion-body">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="Analogue">
+                        <label class="form-check-label" for="Analogue">
+                          Analogue
+                        </label>
+                      </div>
+                      
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="Sensor">
+                        <label class="form-check-label" for="Sensor">
+                          Sensor
+                        </label>
+                      </div>
+
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="Mixed-Signals">
+                        <label class="form-check-label" for="Mixed-Signals">
+                          Mixed-Signals
+                        </label>
+                      </div>
+
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="Power">
+                        <label class="form-check-label" for="Power">
+                          Power
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              <hr>
+            </li>
+            <li>
+              <label >Price Range</label>
+                <input type="range" class="form-range" id="customRange1" style="width: 80%; margin-left: 30px;" min="100" max="1000" step="50" oninput="document.getElementById('rangeValue').textContent = '$' + this.value;">
+                <span id="rangeValue" style="margin-left: 10px;">$100</span>
+              <hr>
+            </li>
+            <li>
+              <div class="accordion" id="BrandList">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#Brands" aria-expanded="false" aria-controls="collapseOne">
+                      Brands
+                    </button>
+                  </h2>
+                  <div id="Brands" class="accordion-collapse collapse show" data-bs-parent="#CategoriesList">
+                    <div class="accordion-body">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="Arduino">
+                        <label class="form-check-label" for="Arduino">
+                          Arduino 
+                        </label>
+                      </div>
+                      
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="Elegoo">
+                        <label class="form-check-label" for="Elegoo">
+                          Elegoo
+                        </label>
+                      </div>
+
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="Keyestudio">
+                        <label class="form-check-label" for="Keyestudio">
+                          Keyestudio
+                        </label>
+                      </div>
+
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="DFRobot">
+                        <label class="form-check-label" for="DFRobot">
+                          DFRobot
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              <hr>
+            </li>
+            <li>
+              <button class="btn btn-link">Rating</button>
+              <hr>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+        <div class="col-8 col-md-8  d-flex justify-content-center align-items-center ">
+          <div class="row gap-2 m-5 ">
+            <div class="container ">
+              <div class="row">
+                <div *ngFor="let product of products" class="col mb-4">
+                  <div class="card" style="width: 18rem;">
+                    <div class="card-img-top wallpaper d-flex justify-content-center align-items-center">
+                      <a href="#" class="btn btn-medium btn-dark text-uppercase btn-rounded-none visible">
+                        Add To Cart
+                        <ng-icon name="featherShoppingCart" color="#fff"></ng-icon>
+                      </a>
+                    </div>
+                    <div class="card-body d-flex justify-content-between">
+                      <h5 class="card-title">{{ product.title }}</h5>
+                      <p class="card-text">{{ product.price }}$</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

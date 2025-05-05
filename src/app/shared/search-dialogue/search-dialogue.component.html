@@ -1,38 +1,31 @@
 <div class="search-popup" [class.is-visible]="isSearchPopupVisible">
     <button type="button" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar" class="btn-close btn-close-black float-end p-3" (click)="closeSearchPopup()"></button>
-    <div class="search-popup-container" >
-      <form role="search" method="get" class="search-form" action="">
-        <label for="search-form" class="visually-hidden">Search</label>
-        <input type="search" id="search-form" class="search-field" placeholder="Type and press enter" value="" name="s" />
-        <button type="submit" class="search-submit">
-          <svg class="search">
-            <use xlink:href="#search"></use>
-          </svg>
-        </button>
+    <div class="search-popup-container">
+      <form role="search" method="get" class="search-form d-flex align-items-centerjustify-content-around">
+      <label for="search-form" class="visually-hidden">Search</label>
+      <input type="search" id="search-form" class="search-field flex-grow-1 me-2" placeholder="Type and press enter" value="" name="s" />
+      <button type="submit" class="btn p-0">
+        <ng-icon name="featherSearch" size="40" color="#000" class="search" style="display: inline-block; margin-left: 5px;"></ng-icon>
+      </button>
       </form>
+
   
       <h5 class="cat-list-title">Browse Categories</h5>
       <ul class="cat-list">
         <li class="cat-list-item">
-          <a href="#" title="Mobile Phones">Mobile Phones</a>
+          <a href="#" title="Mobile Phones">Analog Circuits</a>
         </li>
         <li class="cat-list-item">
-          <a href="#" title="Smart Watches">Smart Watches</a>
+          <a href="#" title="Smart Watches">Digital Circuits</a>
         </li>
         <li class="cat-list-item">
-          <a href="#" title="Headphones">Headphones</a>
+          <a href="#" title="Headphones">Mixed-Signal</a>
         </li>
         <li class="cat-list-item">
-          <a href="#" title="Accessories">Accessories</a>
+          <a href="#" title="Accessories">Power Circuits</a>
         </li>
         <li class="cat-list-item">
-          <a href="#" title="Monitors">Monitors</a>
-        </li>
-        <li class="cat-list-item">
-          <a href="#" title="Speakers">Speakers</a>
-        </li>
-        <li class="cat-list-item">
-          <a href="#" title="Memory Cards">Memory Cards</a>
+          <a href="#" title="Memory Cards">Sensor</a>
         </li>
       </ul>
     </div>

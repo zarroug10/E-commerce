@@ -17,38 +17,32 @@
           <div class="offcanvas-body">
             <ul id="navbar" class="navbar-nav text-uppercase justify-content-end align-items-center flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link me-4 active" href="#billboard">Home</a>
+                <a class="nav-link me-4" routerLink="/home" routerLinkActive="active">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link me-4" href="#company-services">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link me-4" href="#mobile-products">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link me-4" href="#smart-watches">Watches</a>
+                <a class="nav-link me-4"  routerLink="/shop" routerLinkActive="active">Shop</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link me-4" href="#yearly-sale">Sale</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link me-4" href="#latest-blog">Blog</a>
+                <a class="nav-link me-4" href="#latest-blog">About</a>
               </li>
               <li class="nav-item">
                 <div class="user-items ps-5">
                   <ul class="d-flex justify-content-end list-unstyled">
                     <li class="search-item pe-3">
-                      <a href="#" class="search-button" (click)="openSearchPopup()">
+                      <a class="search-button" (click)="openSearchPopup()">
                         <ng-icon name="featherSearch" class="search" color="#212529"></ng-icon>
                       </a>
                     </li>
                     <li class="pe-3">
-                      <a href="#">
+                      <a [routerLink]="'auth/login'">
                           <ng-icon name="featherUser" class="user" color="#212529"></ng-icon>
                       </a>
                     </li>
                     <li>
-                      <a href="index.html">
+                      <a (click)="openCartDialog()"  data-toggle="modal" data-target="#exampleModal">
                         <ng-icon name="featherShoppingCart" class="cart" color="#212529"></ng-icon>
                       </a>
                     </li>
@@ -61,55 +55,3 @@
       </div>
     </nav>
   </header>
-  <section id="billboard" class="position-relative overflow-hidden bg-light-blue">
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="container d-flex align-items-center justify-content-between" style="width: 100%; height: 500px;">
-            <div class="row d-flex align-items-center justify-content-between">
-              <div class="col-md-6">
-                <div class="banner-content">
-                  <h1 class="display-4 text-uppercase text-dark pb-5">Your Products Are Great.</h1>
-                  <a href="index.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop Product</a>
-                </div>
-              </div>
-              <div class="col-md-5">
-                <div class="image-holder">
-                  <img src="images/Arduino.png" class="d-block w-100" alt="banner" style="rotate:-20deg;">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container d-flex align-items-center justify-content-center" style="width: 100%; height: 500px;">
-            <div class="row d-flex align-items-center">
-              <div class="col-md-6">
-                <div class="banner-content">
-                  <h1 class="display-4 text-uppercase text-dark pb-5">Technology Hack You Won't Get</h1>
-                  <a href="index.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop Product</a>
-                </div>
-              </div>
-              <div class="col-md-5">
-                <div class="image-holder">
-                  <img src="images/Arduino.png" class="d-block w-100" alt="banner" style="rotate:-20deg;">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </section>

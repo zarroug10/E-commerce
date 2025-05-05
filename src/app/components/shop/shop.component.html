@@ -1,0 +1,56 @@
+<section id="sales-offers" class="position-relative overflow-hidden bg-light-blue">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container d-flex align-items-center justify-content-between" style="width: 100%; height: 500px;">
+                    <div class="row d-flex align-items-center justify-content-between">
+                        <div class="col-md-6">
+                            <div class="banner-content">
+                                <h2 class="display-4 text-uppercase text-dark pb-5">Exclusive Sales Offers Just for You.</h2>
+                                <a href="index.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop Now</a>
+                            </div>
+                        </div>
+                        <div class="col-md-5 d-flex align-items-center justify-content-center">
+                            <div class="big-sale-number text-center">
+                                <p class="display-1 fw-bold sale-percentage" style="font-size: 120px; color: #212529;">50%</p>
+                                <p class="text-uppercase text-dark">Off on Selected Items</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container d-flex align-items-center justify-content-center" style="width: 100%; height: 500px;">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-md-6">
+                            <div class="banner-content">
+                                <h2 class="display-4 text-uppercase text-dark pb-5">Unmissable Deals on Top Products.</h2>
+                                <a href="index.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop Now</a>
+                            </div>
+                        </div>
+                        <div class="col-md-5 d-flex align-items-center justify-content-center">
+                            <div class="big-sale-number text-center">
+                                <p class="display-1 fw-bold sale-percentage" style="font-size: 120px; color: #212529;">30%</p>
+                                <p class="text-uppercase text-dark">Off on Best Sellers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+<app-product-cards [products]="circuits"></app-product-cards>

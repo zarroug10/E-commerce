@@ -413,6 +413,20 @@ CSS STRUCTURE:
   
   /** Search Popup
   --------------------------------------------------------------*/
+  .cart-dialog{
+    background-color: #fff;
+    position: fixed;
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .cart-dialog.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
   .search-popup {
     background-color: #fff;
     position: fixed;
@@ -1023,3 +1037,7 @@ CSS STRUCTURE:
   .post-navigation:focus svg {
       fill: var(--primary-color);
   }
+
+ .rating-star{
+    color:var(--primary-color);
+ }
